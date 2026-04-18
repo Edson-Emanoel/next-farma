@@ -1,15 +1,15 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Nurse Assist | Cadastro",
-  description: "Tela de cadastro para profissionais de enfermagem.",
+  title: "Nurse Assist | Entrar",
+  description: "Tela de login para profissionais de enfermagem.",
 };
 
-export default function Home() {
+export default function LoginPage() {
   return (
     <main className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(17,150,212,0.2),_transparent_22%),linear-gradient(180deg,_#041f29_0%,_#042932_42%,_#032d2e_100%)] px-6 py-6 text-slate-50 md:py-8">
       <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
-      <div className="absolute left-1/2 top-1/2 h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/12 blur-3xl" />
+      <div className="absolute left-1/2 top-1/2 h-128 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/12 blur-3xl" />
 
       <section className="relative z-10 flex w-full max-w-md flex-col items-center gap-6 md:gap-8">
         <div className="flex items-center gap-4">
@@ -42,31 +42,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full rounded-[2rem] border border-white/8 bg-slate-950/55 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur md:p-8">
+        <div className="w-full rounded-4xl border border-white/8 bg-slate-950/55 p-6 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur md:p-8">
           <div className="mb-7 text-center">
             <h1 className="text-4xl font-semibold tracking-[-0.04em] text-white">
-              Criar conta
+              Entrar
             </h1>
             <p className="mt-3 text-lg text-slate-300">
-              Comece a organizar sua rotina hoje
+              Acesse sua rotina clínica com segurança
             </p>
           </div>
 
           <form className="space-y-4">
-            <label className="block">
-              <span className="mb-3 block text-base font-medium text-slate-200">
-                Nome completo
-              </span>
-              <div className="flex h-14 items-center gap-3 rounded-lg border border-white/10 bg-[#07131d] px-4 text-slate-300 transition focus-within:border-cyan-400/60 focus-within:ring-2 focus-within:ring-cyan-400/15">
-                <UserIcon />
-                <input
-                  type="text"
-                  placeholder="Maria Silva"
-                  className="w-full border-0 bg-transparent text-lg outline-none placeholder:text-slate-500"
-                />
-              </div>
-            </label>
-
             <label className="block">
               <span className="mb-3 block text-base font-medium text-slate-200">
                 Email
@@ -89,21 +75,7 @@ export default function Home() {
                 <LockIcon />
                 <input
                   type="password"
-                  placeholder="••••••••"
-                  className="w-full border-0 bg-transparent text-lg outline-none placeholder:text-slate-500"
-                />
-              </div>
-            </label>
-
-            <label className="block">
-              <span className="mb-3 block text-base font-medium text-slate-200">
-                Confirmar senha
-              </span>
-              <div className="flex h-14 items-center gap-3 rounded-lg border border-white/10 bg-[#07131d] px-4 text-slate-300 transition focus-within:border-cyan-400/60 focus-within:ring-2 focus-within:ring-cyan-400/15">
-                <LockIcon />
-                <input
-                  type="password"
-                  placeholder="Repita sua senha"
+                  placeholder="Digite sua senha"
                   className="w-full border-0 bg-transparent text-lg outline-none placeholder:text-slate-500"
                 />
               </div>
@@ -113,45 +85,27 @@ export default function Home() {
               type="submit"
               className="mt-5 flex h-14 w-full items-center justify-center rounded-xl bg-[#1089c9] text-lg font-semibold text-white transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
             >
-              Criar conta
+              Entrar
             </button>
           </form>
 
           <p className="mt-7 text-center text-lg text-slate-400">
-            Já tem conta?{" "}
+            Ainda não tem conta?{" "}
             <Link
-              href="/login"
+              href="/"
               className="font-semibold text-cyan-400 transition hover:text-cyan-300"
             >
-              Entrar
+              Criar conta
             </Link>
           </p>
         </div>
 
         <p className="max-w-xl text-center text-base leading-6 text-slate-300/90 md:text-lg md:leading-7">
-          Ao continuar, você concorda em manter o sigilo dos dados clínicos sob
-          sua responsabilidade.
+          Sua jornada começa com dados protegidos, acesso rápido e suporte para
+          cada plantão.
         </p>
       </section>
     </main>
-  );
-}
-
-function UserIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-5 w-5 shrink-0"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M20 21a8 8 0 0 0-16 0" />
-      <circle cx="12" cy="8" r="4" />
-    </svg>
   );
 }
 
