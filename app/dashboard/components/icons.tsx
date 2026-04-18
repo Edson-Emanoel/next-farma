@@ -138,3 +138,210 @@ export function ArrowRightIcon() {
     </svg>
   );
 }
+
+export function SearchIcon() {
+  return (
+    <svg {...iconProps()}>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.5-3.5" />
+    </svg>
+  );
+}
+
+export function StarIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="m12 3.5 2.8 5.67 6.27.91-4.54 4.43 1.07 6.25L12 17.8l-5.6 2.96 1.07-6.25-4.54-4.43 6.27-.91Z" />
+    </svg>
+  );
+}
+
+export function PlusIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M12 5v14" />
+      <path d="M5 12h14" />
+    </svg>
+  );
+}
+
+export function ChevronDownIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
+export function ChevronLeftIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="m15 18-6-6 6-6" />
+    </svg>
+  );
+}
+
+export function ChevronRightIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="m9 18 6-6-6-6" />
+    </svg>
+  );
+}
+
+export function ArrowLeftIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M19 12H5" />
+      <path d="m11 18-6-6 6-6" />
+    </svg>
+  );
+}
+
+export function CopyIcon() {
+  return (
+    <svg {...iconProps()}>
+      <rect x="9" y="9" width="11" height="11" rx="2" />
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </svg>
+  );
+}
+
+export function SaveIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z" />
+      <path d="M17 21v-8H7v8" />
+      <path d="M7 3v5h8" />
+    </svg>
+  );
+}
+
+export function LogOutIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+      <path d="m16 17 5-5-5-5" />
+      <path d="M21 12H9" />
+    </svg>
+  );
+}
+
+export function MoonIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
+    </svg>
+  );
+}
+
+export function ClockIcon() {
+  return (
+    <svg {...iconProps()}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 3" />
+    </svg>
+  );
+}
+
+export function FolderIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+    </svg>
+  );
+}
+
+export function ActivityIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M3 12h4l2-5 4 10 2-5h6" />
+    </svg>
+  );
+}
+
+export function BeakerIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M10 2v6l-5 8a4 4 0 0 0 3.4 6h7.2A4 4 0 0 0 19 16l-5-8V2" />
+      <path d="M8 2h8" />
+      <path d="M7 14h10" />
+    </svg>
+  );
+}
+
+export function ChecklistIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M9 6h11" />
+      <path d="M9 12h11" />
+      <path d="M9 18h11" />
+      <path d="m4 6 1.5 1.5L7.5 5" />
+      <path d="m4 12 1.5 1.5L7.5 11" />
+    </svg>
+  );
+}
+
+export function CupIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M7 6h8v5a4 4 0 0 1-4 4 4 4 0 0 1-4-4Z" />
+      <path d="M15 7h2a2 2 0 0 1 0 4h-2" />
+      <path d="M8 19h6" />
+    </svg>
+  );
+}
+
+export function PalmtreeIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M12 21v-8" />
+      <path d="M12 13c-1-3-4-5-7-5 2.5-1 5.5-.6 8 1" />
+      <path d="M12 13c1-3 4-5 7-5-2.5-1-5.5-.6-8 1" />
+      <path d="M12 13c-2.5-2.5-3-6-2-9 2 1 3.5 3.5 4 6" />
+    </svg>
+  );
+}
+
+export function BarChartIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M4 20V10" />
+      <path d="M10 20V4" />
+      <path d="M16 20v-7" />
+      <path d="M22 20v-3" />
+      <path d="M2 20h20" />
+    </svg>
+  );
+}
+
+export function BriefcaseIcon() {
+  return (
+    <svg {...iconProps()}>
+      <rect x="3" y="7" width="18" height="12" rx="2" />
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+      <path d="M3 12h18" />
+    </svg>
+  );
+}
+
+export function SwapIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M7 7h11" />
+      <path d="m14 4 4 3-4 3" />
+      <path d="M17 17H6" />
+      <path d="m10 14-4 3 4 3" />
+    </svg>
+  );
+}
+
+export function PrinterIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M6 9V4h12v5" />
+      <rect x="6" y="14" width="12" height="6" rx="1" />
+      <rect x="3" y="9" width="18" height="7" rx="2" />
+    </svg>
+  );
+}
