@@ -44,15 +44,25 @@ export default function PatientsPage() {
             />
           </label>
 
-          <button className="inline-flex items-center justify-between rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm font-medium text-white">
-            Todas as unidades
-            <ChevronDownIcon />
-          </button>
+          <select className="inline-flex items-center justify-between rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm font-medium text-white">
+            <option value="Todas">Todas as unidades</option>
+            <option value="Enfermaria">Enfermaria</option>
+            <option value="Emergencia">Urgência / Emergência</option>
+            <option value="Uti">UTI</option>
+            <option value="Pediatria">Pediatria</option>
+            <option value="CentroCirurgico">Centro Cirúrgico</option>
+            <option value="HomeCare">Home Care</option>
+            <option value="ClinicaMedica">Clínica Médica</option>
+            <option value="ClinicaCirurgica">Clínica Cirúrgica</option>
+            <option value="Maternidade">Maternidade</option>
+            <option value="UnidadePersonalizada">Unidade Personalizada</option>
+          </select>
 
-          <button className="inline-flex items-center justify-between rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm font-medium text-white">
-            Mais recentes
-            <ChevronDownIcon />
-          </button>
+          <select className="inline-flex items-center justify-between rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm font-medium text-white">
+            <option value="MaisRecentes">Mais recentes</option>
+            <option value="NomeAZ">Nome A - Z</option>
+            <option value="PorUnidade">Por unidade</option>
+          </select>
 
           <SecondaryButton className="gap-2 rounded-[1rem] py-3">
             <StarIcon />

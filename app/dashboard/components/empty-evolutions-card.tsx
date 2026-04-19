@@ -23,7 +23,7 @@ export function EmptyEvolutionsCard() {
           <p className="mt-3 text-sm text-slate-400">
             Registre a primeira evolução do seu plantão.
           </p>
-          <button className="mt-6 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110">
+          <button className="mt-6 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110">
             + Nova evolução
           </button>
         </div>

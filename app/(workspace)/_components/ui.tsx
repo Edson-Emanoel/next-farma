@@ -55,8 +55,8 @@ export function EmptyStateCard({
 }: Readonly<EmptyStateProps>) {
   const actionClassName =
     actionTone === "danger"
-      ? "bg-rose-500/12 text-rose-300 hover:bg-rose-500/18"
-      : "bg-sky-500 px-5 text-slate-950 hover:brightness-110";
+      ? "bg-rose-500/12 text-white hover:bg-rose-500/18"
+      : "bg-sky-500 px-5 text-white hover:brightness-110";
 
   return (
     <SectionCard className={`${minHeightClassName} flex items-center justify-center`}>
@@ -146,7 +146,7 @@ export function PrimaryButton({
   href?: string;
   className?: string;
 }>) {
-  const classes = `inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110 ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110 ${className}`;
 
   if (href) {
     return (

@@ -29,7 +29,7 @@ export default function SettingsPage() {
             <h2 className="text-2xl leading-none font-semibold tracking-[-0.04em] text-white">
               Identificação profissional
             </h2>
-            <button className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110">
+            <button className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110">
               <SaveIcon />
               Salvar
             </button>
@@ -89,7 +89,7 @@ export default function SettingsPage() {
           <h2 className="text-2xl leading-none font-semibold tracking-[-0.04em] text-white">
             Conta
           </h2>
-          <SecondaryButton className="mt-5 gap-2 rounded-[1rem] border-rose-500/18 bg-rose-500/12 text-rose-300 hover:border-rose-500/28 hover:text-rose-200">
+          <SecondaryButton className="mt-5 gap-2 rounded-[1rem] border-rose-500/18 bg-rose-500/12 text-white hover:border-rose-500/28 hover:text-white">
             <LogOutIcon />
             Sair
           </SecondaryButton>

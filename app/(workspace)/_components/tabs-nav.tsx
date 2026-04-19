@@ -63,7 +63,7 @@ export function TabsNav({ items }: TabsNavProps) {
 
   return (
     <div className="mb-5 border-b border-white/8">
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-nowrap items-stretch gap-2">
         {items.map((item) => {
           const active = isTabActive(pathname, item.href, item.matches);
 
@@ -71,7 +71,7 @@ export function TabsNav({ items }: TabsNavProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`inline-flex items-center gap-2 rounded-t-[1rem] border border-b-0 px-4 py-3 text-sm font-medium transition ${
+              className={`inline-flex min-w-0 flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-t-[1rem] border border-b-0 px-3 py-3 text-[11px] font-medium transition sm:text-xs ${
                 active
                   ? "border-sky-400/30 bg-sky-500/18 text-sky-300"
                   : "border-transparent text-slate-400 hover:text-white"
@@ -80,10 +80,14 @@ export function TabsNav({ items }: TabsNavProps) {
               {item.iconName
                 ? (() => {
                     const Icon = iconMap[item.iconName];
-                    return <Icon />;
+                    return (
+                      <span className="shrink-0">
+                        <Icon />
+                      </span>
+                    );
                   })()
                 : null}
-              {item.label}
+              <span className="min-w-0 truncate">{item.label}</span>
             </Link>
           );
         })}

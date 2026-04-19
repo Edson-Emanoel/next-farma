@@ -43,7 +43,7 @@ export function CalculatorWorkspace() {
               onClick={() => setMode(item.key)}
               className={`inline-flex items-center gap-3 rounded-[1rem] border px-4 py-3 text-left transition ${
                 active
-                  ? "border-sky-400/30 bg-sky-500 text-slate-950"
+                  ? "border-sky-400/30 bg-sky-500 text-white"
                   : "border-white/8 bg-[rgba(18,33,44,0.95)] text-slate-200 hover:border-white/14"
               }`}
             >
@@ -52,7 +52,7 @@ export function CalculatorWorkspace() {
                 <span className="block text-sm font-semibold">{item.title}</span>
                 <span
                   className={`block text-xs ${
-                    active ? "text-slate-900/80" : "text-slate-500"
+                    active ? "text-white/80" : "text-slate-500"
                   }`}
                 >
                   {item.subtitle}

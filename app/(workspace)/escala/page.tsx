@@ -32,7 +32,7 @@ export default function ScalePage() {
               <PlusIcon />
               Plantão
             </PrimaryButton>
-            <button className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110">
+            <button className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110">
               <PlusIcon />
               <span className="ml-2">Folga</span>
             </button>

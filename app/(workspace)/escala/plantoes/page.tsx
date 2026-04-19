@@ -45,7 +45,7 @@ export default function ScaleShiftsPage() {
             key={tab}
             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
               index === 0
-                ? "bg-sky-500 text-slate-950"
+                ? "bg-sky-500 text-white"
                 : "bg-white/6 text-slate-400 hover:text-white"
             }`}
           >

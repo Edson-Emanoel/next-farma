@@ -13,7 +13,7 @@ export default function PersonalScaleLayout({
   children: ReactNode;
 }>) {
   return (
-    <section className="mx-auto max-w-[860px] pb-8">
+    <section className="mx-auto max-w-[1120px] pb-8">
       <TabsNav items={personalScaleTabs} />
 
       <InfoStrip

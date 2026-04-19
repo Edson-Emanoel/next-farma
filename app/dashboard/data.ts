@@ -61,36 +61,42 @@ export const quickActions = [
     description: "",
     tone: "bg-blue-500/20 text-blue-300",
     icon: PeopleIcon,
+    href: "/pacientes",
   },
   {
     label: "Evolução",
     description: "",
     tone: "bg-emerald-500/20 text-emerald-300",
     icon: NotesIcon,
+    href: "/evolucao",
   },
   {
     label: "Medicações",
     description: "",
     tone: "bg-violet-500/20 text-violet-300",
     icon: PillIcon,
+    href: "/medicacoes",
   },
   {
     label: "Prescrições",
     description: "",
     tone: "bg-orange-500/20 text-orange-300",
     icon: PrescriptionIcon,
+    href: "/prescricoes",
   },
   {
     label: "Calculadora",
     description: "",
     tone: "bg-sky-500/20 text-sky-300",
     icon: GridIcon,
+    href: "/calculadora",
   },
   {
     label: "Histórico",
     description: "",
     tone: "bg-pink-500/20 text-pink-300",
     icon: HistoryIcon,
+    href: "/historico",
   },
 ];
 
