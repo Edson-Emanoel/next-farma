@@ -16,7 +16,7 @@ export default function ScaleDaysOffPage() {
         title="Folgas"
         description="Folgas, licenças e feriados."
         actions={
-          <PrimaryButton className="gap-2">
+          <PrimaryButton className="gap-2" href="/escala/folgas/nova">
             <PlusIcon />
             Nova folga
           </PrimaryButton>
@@ -35,6 +35,7 @@ export default function ScaleDaysOffPage() {
           title="Sem folgas registradas"
           description="Marque suas folgas para ter um controle melhor da sua escala."
           actionLabel="+ Nova folga"
+          actionHref="/escala/folgas/nova"
           minHeightClassName="min-h-[220px]"
         />
       </div>

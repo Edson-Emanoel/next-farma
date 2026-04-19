@@ -9,7 +9,7 @@ export function DashboardHeader() {
         </div>
         <div>
           <h1 className="text-[2.2rem] leading-none font-semibold tracking-[-0.05em] text-white md:text-[2.7rem]">
-            Bom dia, Maria
+            Bom dia, Edson
           </h1>
           <p className="mt-2 text-base text-slate-400">
             Sábado, 18 de abril · 11:14

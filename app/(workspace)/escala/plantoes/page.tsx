@@ -27,11 +27,11 @@ export default function ScaleShiftsPage() {
         description="Lista completa, filtros, duplicação rápida e trocas."
         actions={
           <div className="flex flex-wrap gap-3">
-            <SecondaryButton className="gap-2">
+            <SecondaryButton className="gap-2" href="/gestao-escala">
               <SwapIcon />
               Troca
             </SecondaryButton>
-            <PrimaryButton className="gap-2">
+            <PrimaryButton className="gap-2" href="/escala/plantoes/novo">
               <PlusIcon />
               Novo plantão
             </PrimaryButton>
@@ -59,6 +59,7 @@ export default function ScaleShiftsPage() {
         title="Nenhum plantão"
         description="Adicione seu primeiro plantão para começar a organizar a escala."
         actionLabel="+ Novo plantão"
+        actionHref="/escala/plantoes/novo"
         minHeightClassName="min-h-[220px]"
       />
     </>

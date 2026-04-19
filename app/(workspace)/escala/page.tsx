@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import {
   ActivityIcon,
   CalendarIcon,
@@ -28,15 +30,18 @@ export default function ScalePage() {
         description="Resumo do mês, próximos compromissos e ações rápidas."
         actions={
           <div className="flex flex-wrap gap-3">
-            <PrimaryButton className="gap-2">
+            <PrimaryButton className="gap-2" href="/escala/plantoes/novo">
               <PlusIcon />
               Plantão
             </PrimaryButton>
-            <button className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110">
+            <PrimaryButton
+              className="gap-2 bg-emerald-400 hover:brightness-110"
+              href="/escala/folgas/nova"
+            >
               <PlusIcon />
-              <span className="ml-2">Folga</span>
-            </button>
-            <SecondaryButton className="gap-2">
+              Folga
+            </PrimaryButton>
+            <SecondaryButton className="gap-2" href="/escala/ferias/nova">
               <PlusIcon />
               Férias
             </SecondaryButton>
@@ -78,9 +83,12 @@ export default function ScalePage() {
             <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
               Próximos plantões
             </h2>
-            <button className="text-sm font-semibold text-sky-400 transition hover:text-sky-300">
+            <Link
+              href="/escala/plantoes"
+              className="text-sm font-semibold text-sky-400 transition hover:text-sky-300"
+            >
               Ver todos
-            </button>
+            </Link>
           </div>
           <div className="mt-4 rounded-[1rem] border border-white/6 bg-[#0a1620] px-4 py-7 text-center text-sm text-slate-400">
             Nenhum plantão agendado este mês.

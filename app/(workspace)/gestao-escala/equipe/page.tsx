@@ -16,7 +16,7 @@ export default function ShiftManagementTeamPage() {
         title="Equipe"
         description="Cadastro rápido dos profissionais para montar a escala."
         actions={
-          <PrimaryButton className="gap-2">
+          <PrimaryButton className="gap-2" href="/gestao-escala/equipe/novo">
             <PlusIcon />
             Novo
           </PrimaryButton>
@@ -28,6 +28,7 @@ export default function ShiftManagementTeamPage() {
         title="Nenhum funcionário cadastrado ainda."
         description=""
         actionLabel="+ Cadastrar primeiro"
+        actionHref="/gestao-escala/equipe/novo"
         minHeightClassName="min-h-[170px]"
       />
     </>

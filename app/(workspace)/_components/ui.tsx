@@ -146,7 +146,7 @@ export function PrimaryButton({
   href?: string;
   className?: string;
 }>) {
-  const classes = `inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110 ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-lg bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110 ${className}`;
 
   if (href) {
     return (
@@ -161,16 +161,22 @@ export function PrimaryButton({
 
 export function SecondaryButton({
   children,
+  href,
   className = "",
 }: Readonly<{
   children: ReactNode;
+  href?: string;
   className?: string;
 }>) {
-  return (
-    <button
-      className={`inline-flex items-center justify-center rounded-full border border-white/10 bg-white/3 px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:border-white/18 hover:text-white ${className}`}
-    >
-      {children}
-    </button>
-  );
+  const classes = `inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/3 px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:border-white/18 hover:text-white ${className}`;
+
+  if (href) {
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
+  return <button className={classes}>{children}</button>;
 }

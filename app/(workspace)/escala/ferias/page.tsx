@@ -16,7 +16,7 @@ export default function ScaleVacationPage() {
         title="Férias"
         description="Planeje e acompanhe seus períodos de descanso."
         actions={
-          <PrimaryButton className="gap-2">
+          <PrimaryButton className="gap-2" href="/escala/ferias/nova">
             <PlusIcon />
             Novas férias
           </PrimaryButton>
@@ -51,6 +51,7 @@ export default function ScaleVacationPage() {
           title="Sem férias planejadas"
           description="Programe suas férias para visualizar tudo no calendário."
           actionLabel="+ Novas férias"
+          actionHref="/escala/ferias/nova"
           minHeightClassName="min-h-[220px]"
         />
       </div>
