@@ -14,8 +14,10 @@ import type {
 import { z } from "zod";
 
 import { buildValidatedSubmitHandler } from "../_lib/form-submit";
+import { DatePickerField } from "./date-picker-field";
 import { PageHeader } from "./page-header";
 import { CpfInput } from "./cpf-input";
+import { PhoneInput } from "./phone-input";
 import { PrimaryButton, SecondaryButton, SectionCard } from "./ui";
 
 type FormSectionProps = {
@@ -142,7 +144,7 @@ export function NewPacienteForm() {
               <TextInput name="recordNumber" placeholder="Ex: 004512" />
             </FormField>
             <FormField label="Data de nascimento">
-              <TextInput defaultValue="19/04/2026" name="birthDate" type="date" />
+              <DatePickerField defaultValue="2026-04-19" name="birthDate" />
             </FormField>
             <FormField label="Sexo">
               <SelectField defaultValue="" name="sex">
@@ -159,7 +161,7 @@ export function NewPacienteForm() {
               <CpfInput name="cpf" />
             </FormField>
             <FormField label="Telefone Familiar">
-              <TextInput name="familyPhone" placeholder="Telefone de um Familiar" />
+              <PhoneInput name="familyPhone" />
             </FormField>
           </div>
 
@@ -190,7 +192,7 @@ export function NewPacienteForm() {
               <TextInput name="room" placeholder="Ex: 204" />
             </FormField>
             <FormField label="Data de admissão">
-              <TextInput defaultValue="19/04/2026" name="admissionDate" type="date" />
+              <DatePickerField defaultValue="2026-04-19" name="admissionDate" />
             </FormField>
             <FormField label="Diagnóstico principal">
               <TextInput name="mainDiagnosis" placeholder="Motivo da internação" />

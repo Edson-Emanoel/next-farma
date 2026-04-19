@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import type {
-  InputHTMLAttributes,
   ReactNode,
   SelectHTMLAttributes,
   TextareaHTMLAttributes,
@@ -20,6 +19,7 @@ import {
   SectionCard,
 } from "./ui";
 import { buildValidatedSubmitHandler } from "../_lib/form-submit";
+import { DatePickerField } from "./date-picker-field";
 
 const dayOffReasons = ["Recuperação", "Feriado", "Compensação", "Pessoal"];
 
@@ -34,10 +34,6 @@ type FormFieldProps = {
   children: ReactNode;
   hint?: string;
   className?: string;
-};
-
-type TextInputProps = InputHTMLAttributes<HTMLInputElement> & {
-  suffix?: string;
 };
 
 type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
@@ -79,21 +75,6 @@ function FormField({
       {hint ? <span className="mt-2 block text-xs text-slate-500">{hint}</span> : null}
     </label>
   );
-}
-
-function TextInput({ className = "", suffix, ...props }: Readonly<TextInputProps>) {
-  if (suffix) {
-    return (
-      <div className="relative">
-        <input {...props} className={`${fieldBaseClassName} pr-10 ${className}`} />
-        <span className="pointer-events-none absolute inset-y-0 right-4 inline-flex items-center text-xs text-slate-400">
-          {suffix}
-        </span>
-      </div>
-    );
-  }
-
-  return <input {...props} className={`${fieldBaseClassName} ${className}`} />;
 }
 
 function SelectField({ className = "", children, ...props }: Readonly<SelectProps>) {
@@ -156,7 +137,7 @@ export function NewFolgaForm() {
           </div>
 
           <FormField label="Data">
-            <TextInput defaultValue="2026-04-19" name="date" type="date" />
+            <DatePickerField defaultValue="2026-04-19" name="date" />
           </FormField>
 
           <div className="space-y-2">

@@ -21,6 +21,7 @@ import {
   SectionCard,
 } from "./ui";
 import { buildValidatedSubmitHandler } from "../_lib/form-submit";
+import { DatePickerField } from "./date-picker-field";
 
 type FormSectionProps = {
   title: string;
@@ -185,7 +186,7 @@ export function NewPlantaoForm() {
 
           <div className="flex flex-col gap-2 rounded-[1.15rem] border border-sky-400/12 bg-sky-500/6 p-4">
             <FormField label="Data">
-              <TextInput defaultValue="2026-04-19" name="shiftDate" type="date" />
+              <DatePickerField defaultValue="2026-04-19" name="shiftDate" />
             </FormField>
 
             <div className="grid gap-4 md:grid-cols-2">

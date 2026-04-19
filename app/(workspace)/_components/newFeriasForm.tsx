@@ -20,6 +20,7 @@ import {
   SectionCard,
 } from "./ui";
 import { buildValidatedSubmitHandler } from "../_lib/form-submit";
+import { DatePickerField } from "./date-picker-field";
 
 type FormSectionProps = {
   title: string;
@@ -142,10 +143,10 @@ export function NewFeriasForm() {
             </p>
             <div className="mt-3 grid gap-4 md:grid-cols-2">
               <FormField label="Início">
-                <TextInput defaultValue="2026-04-19" name="startDate" type="date" />
+                <DatePickerField defaultValue="2026-04-19" name="startDate" />
               </FormField>
               <FormField label="Fim">
-                <TextInput defaultValue="2026-04-19" name="endDate" type="date" />
+                <DatePickerField defaultValue="2026-04-19" name="endDate" />
               </FormField>
             </div>
           </div>
