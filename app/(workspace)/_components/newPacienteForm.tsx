@@ -17,6 +17,7 @@ import { buildValidatedSubmitHandler } from "../_lib/form-submit";
 import { DatePickerField } from "./date-picker-field";
 import { PageHeader } from "./page-header";
 import { CpfInput } from "./cpf-input";
+import { DecimalInput } from "./masked-inputs";
 import { PhoneInput } from "./phone-input";
 import { PrimaryButton, SecondaryButton, SectionCard } from "./ui";
 
@@ -101,11 +102,11 @@ function SelectField({ className = "", children, ...props }: Readonly<SelectProp
     <div className="relative">
       <select
         {...props}
-        className={`${fieldBaseClassName} appearance-none pr-12 ${className}`}
+        className={`${fieldBaseClassName} appearance-none pr-16 ${className}`}
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute inset-y-0 right-4 inline-flex items-center text-slate-400">
+      <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
         <ChevronDownIcon />
       </span>
     </div>
@@ -203,10 +204,22 @@ export function NewPacienteForm() {
         <FormSection title="Clínico">
           <div className="grid gap-4 md:grid-cols-3">
             <FormField label="Peso">
-              <TextInput name="weight" placeholder="0" suffix="kg" />
+              <DecimalInput
+                decimalPlaces={1}
+                maxIntegerDigits={3}
+                name="weight"
+                placeholder="0,0"
+                suffix="kg"
+              />
             </FormField>
             <FormField label="Altura">
-              <TextInput name="height" placeholder="0,00" suffix="m" />
+              <DecimalInput
+                decimalPlaces={2}
+                maxIntegerDigits={1}
+                name="height"
+                placeholder="0,00"
+                suffix="m"
+              />
             </FormField>
             <FormField label="Alergias">
               <TextInput name="allergies" placeholder="Nega / dipirona..." />

@@ -1,6 +1,13 @@
-import { SettingsIcon } from "@/app/dashboard/components/icons";
+import {
+  ChevronDownIcon,
+  SettingsIcon,
+} from "@/app/dashboard/components/icons";
 
 import { PageHeader } from "../../_components/page-header";
+import {
+  CurrencyInput,
+  IntegerInput,
+} from "../../_components/masked-inputs";
 import { PrimaryButton, SectionCard } from "../../_components/ui";
 
 export const metadata = {
@@ -24,9 +31,10 @@ export default function ScaleSettingsPage() {
               Horas contratadas / mês
             </span>
             <div className="flex items-center rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3">
-              <input
-                defaultValue="160"
+              <IntegerInput
                 className="w-full bg-transparent text-sm text-white outline-none"
+                defaultValue="160"
+                name="contractedHours"
               />
               <span className="text-sm text-slate-400">h</span>
             </div>
@@ -36,9 +44,10 @@ export default function ScaleSettingsPage() {
             <span className="mb-2 block text-sm font-medium text-slate-300">
               Valor por hora (R$)
             </span>
-            <input
-              placeholder="Ex: 35.00"
+            <CurrencyInput
               className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500"
+              name="hourlyRate"
+              placeholder="Ex: 35,00"
             />
           </label>
 
@@ -46,9 +55,14 @@ export default function ScaleSettingsPage() {
             <span className="mb-2 block text-sm font-medium text-slate-300">
               Unidade padrão
             </span>
-            <select className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none">
-              <option>Selecionar</option>
-            </select>
+            <div className="relative">
+              <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm text-white outline-none">
+                <option>Selecionar</option>
+              </select>
+              <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
+                <ChevronDownIcon />
+              </span>
+            </div>
           </label>
 
           <label className="block">
@@ -66,9 +80,10 @@ export default function ScaleSettingsPage() {
               Dias de férias por ano
             </span>
             <div className="flex items-center rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3">
-              <input
-                defaultValue="30"
+              <IntegerInput
                 className="w-full bg-transparent text-sm text-white outline-none"
+                defaultValue="30"
+                name="vacationDays"
               />
               <span className="text-sm text-slate-400">dias</span>
             </div>

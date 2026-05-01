@@ -104,11 +104,11 @@ function SelectField({ className = "", children, ...props }: Readonly<SelectProp
     <div className="relative">
       <select
         {...props}
-        className={`${fieldBaseClassName} appearance-none pr-12 ${className}`}
+        className={`${fieldBaseClassName} appearance-none pr-16 ${className}`}
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute inset-y-0 right-4 inline-flex items-center text-slate-400">
+      <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
         <ChevronDownIcon />
       </span>
     </div>

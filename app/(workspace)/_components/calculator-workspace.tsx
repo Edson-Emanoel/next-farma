@@ -6,12 +6,14 @@ import {
   ActivityIcon,
   AlertIcon,
   BeakerIcon,
+  ChevronDownIcon,
   ClockIcon,
   CopyIcon,
   PillIcon,
   SaveIcon,
 } from "@/app/dashboard/components/icons";
 
+import { DecimalInput } from "./masked-inputs";
 import { PrimaryButton, SectionCard, SecondaryButton } from "./ui";
 
 const calculatorModes = [
@@ -24,9 +26,6 @@ const calculatorModes = [
 
 export function CalculatorWorkspace() {
   const [mode, setMode] = useState("bic");
-  const [dose, setDose] = useState("0,1");
-  const [weight, setWeight] = useState("80");
-  const [concentration, setConcentration] = useState("0,016");
   const [doseUnit, setDoseUnit] = useState("mcg/kg/min");
   const [solutionUnit, setSolutionUnit] = useState("mg/mL");
 
@@ -76,10 +75,13 @@ export function CalculatorWorkspace() {
             <p className="mt-4 text-sm text-slate-300">
               Selecione um preset para auto-preencher diluição padrão
             </p>
-            <label className="mt-2 block">
-              <select className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none">
+            <label className="relative mt-2 block">
+              <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm text-white outline-none">
                 <option>Selecionar medicamento (opcional)</option>
               </select>
+              <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
+                <ChevronDownIcon />
+              </span>
             </label>
           </SectionCard>
 
@@ -96,26 +98,31 @@ export function CalculatorWorkspace() {
                 <span className="mb-2 block text-sm font-medium text-slate-300">
                   Dose prescrita
                 </span>
-                <input
-                  value={dose}
-                  onChange={(event) => setDose(event.target.value)}
+                <DecimalInput
                   className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none"
+                  decimalPlaces={3}
+                  defaultValue="0,1"
+                  maxIntegerDigits={5}
+                  name="dose"
                 />
               </label>
 
-              <label className="block">
+              <label className="relative block">
                 <span className="mb-2 block text-sm font-medium text-slate-300">
                   Unidade da dose
                 </span>
                 <select
                   value={doseUnit}
                   onChange={(event) => setDoseUnit(event.target.value)}
-                  className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none"
+                  className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm text-white outline-none"
                 >
                   <option>mcg/kg/min</option>
                   <option>mg/kg/h</option>
                   <option>mcg/min</option>
                 </select>
+                <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center pt-7 text-slate-400">
+                  <ChevronDownIcon />
+                </span>
               </label>
 
               <label className="block">
@@ -123,10 +130,12 @@ export function CalculatorWorkspace() {
                   Peso do paciente
                 </span>
                 <div className="flex items-center rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3">
-                  <input
-                    value={weight}
-                    onChange={(event) => setWeight(event.target.value)}
+                  <DecimalInput
                     className="w-full bg-transparent text-sm text-white outline-none"
+                    decimalPlaces={1}
+                    defaultValue="80"
+                    maxIntegerDigits={3}
+                    name="weight"
                   />
                   <span className="text-sm text-slate-400">kg</span>
                 </div>
@@ -137,25 +146,30 @@ export function CalculatorWorkspace() {
                   <span className="mb-2 block text-sm font-medium text-slate-300">
                     Concentração da solução
                   </span>
-                  <input
-                    value={concentration}
-                    onChange={(event) => setConcentration(event.target.value)}
+                  <DecimalInput
                     className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none"
+                    decimalPlaces={4}
+                    defaultValue="0,016"
+                    maxIntegerDigits={5}
+                    name="concentration"
                   />
                 </label>
 
-                <label className="block">
+                <label className="relative block">
                   <span className="mb-2 block text-sm font-medium text-slate-300">
                     Unidade
                   </span>
                   <select
                     value={solutionUnit}
                     onChange={(event) => setSolutionUnit(event.target.value)}
-                    className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none"
+                    className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm text-white outline-none"
                   >
                     <option>mg/mL</option>
                     <option>mcg/mL</option>
                   </select>
+                  <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center pt-7 text-slate-400">
+                    <ChevronDownIcon />
+                  </span>
                 </label>
               </div>
             </div>

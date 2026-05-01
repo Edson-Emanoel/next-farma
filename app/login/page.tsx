@@ -81,12 +81,12 @@ export default function LoginPage() {
               </div>
             </label>
 
-            <button
-              type="submit"
+            <Link
+              href="/dashboard"
               className="mt-5 flex h-14 w-full items-center justify-center rounded-xl bg-[#1089c9] text-lg font-semibold text-white transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
             >
               Entrar
-            </button>
+            </Link>
           </form>
 
           <p className="mt-7 text-center text-lg text-slate-400">

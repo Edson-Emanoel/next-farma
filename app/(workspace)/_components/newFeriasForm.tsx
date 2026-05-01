@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import type {
-  InputHTMLAttributes,
   ReactNode,
   SelectHTMLAttributes,
   TextareaHTMLAttributes,
@@ -21,6 +20,7 @@ import {
 } from "./ui";
 import { buildValidatedSubmitHandler } from "../_lib/form-submit";
 import { DatePickerField } from "./date-picker-field";
+import { IntegerInput } from "./masked-inputs";
 
 type FormSectionProps = {
   title: string;
@@ -33,10 +33,6 @@ type FormFieldProps = {
   children: ReactNode;
   hint?: string;
   className?: string;
-};
-
-type TextInputProps = InputHTMLAttributes<HTMLInputElement> & {
-  suffix?: string;
 };
 
 type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
@@ -81,31 +77,16 @@ function FormField({
   );
 }
 
-function TextInput({ className = "", suffix, ...props }: Readonly<TextInputProps>) {
-  if (suffix) {
-    return (
-      <div className="relative">
-        <input {...props} className={`${fieldBaseClassName} pr-10 ${className}`} />
-        <span className="pointer-events-none absolute inset-y-0 right-4 inline-flex items-center text-xs text-slate-400">
-          {suffix}
-        </span>
-      </div>
-    );
-  }
-
-  return <input {...props} className={`${fieldBaseClassName} ${className}`} />;
-}
-
 function SelectField({ className = "", children, ...props }: Readonly<SelectProps>) {
   return (
     <div className="relative">
       <select
         {...props}
-        className={`${fieldBaseClassName} appearance-none pr-12 ${className}`}
+        className={`${fieldBaseClassName} appearance-none pr-16 ${className}`}
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute inset-y-0 right-4 inline-flex items-center text-slate-400">
+      <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
         <ChevronDownIcon />
       </span>
     </div>
@@ -164,7 +145,7 @@ export function NewFeriasForm() {
           </div>
 
           <FormField label="Dias vendidos / abono">
-            <TextInput defaultValue="0" inputMode="numeric" name="soldDays" />
+            <IntegerInput defaultValue="0" name="soldDays" />
           </FormField>
 
           <FormField label="Status">

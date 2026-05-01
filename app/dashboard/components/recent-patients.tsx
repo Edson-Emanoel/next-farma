@@ -14,16 +14,16 @@ type RecentPatientsProps = {
 export function RecentPatients({ patients }: RecentPatientsProps) {
   return (
     <section>
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex items-center justify-between gap-3">
         <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
           Pacientes recentes
         </h2>
-        <button className="text-sm font-semibold text-sky-400 transition hover:text-sky-300">
+        <button className="shrink-0 text-sm font-semibold text-sky-400 transition hover:text-sky-300">
           Ver todos
         </button>
       </div>
 
-      <div className="overflow-hidden rounded-[1.6rem] border border-white/6 bg-[linear-gradient(180deg,rgba(19,35,46,0.94),rgba(16,30,40,0.92))] shadow-[0_18px_50px_rgba(0,0,0,0.16)]">
+      <div className="overflow-hidden rounded-[1.25rem] border border-white/6 bg-[linear-gradient(180deg,rgba(19,35,46,0.94),rgba(16,30,40,0.92))] shadow-[0_18px_50px_rgba(0,0,0,0.16)] sm:rounded-[1.6rem]">
         {patients.map((patient, index) => (
           <PatientRow
             key={patient.name}
@@ -45,7 +45,7 @@ function PatientRow({
 }: RecentPatient & { bordered: boolean }) {
   return (
     <article
-      className={`flex items-center gap-4 px-4 py-4 ${
+      className={`flex items-center gap-3 px-4 py-4 sm:gap-4 ${
         bordered ? "border-b border-white/6" : ""
       }`}
     >
@@ -64,15 +64,15 @@ function PatientRow({
             </span>
           ) : null}
         </div>
-        <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-slate-400">
+        <div className="mt-1 flex min-w-0 flex-col items-start gap-1 text-sm text-slate-400 sm:flex-row sm:flex-wrap sm:items-center sm:gap-2">
           <span className="rounded-full bg-sky-500/14 px-2 py-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-sky-300">
             {unit}
           </span>
-          {status ? <span className="truncate">{status}</span> : null}
+          {status ? <span className="min-w-0 break-words">{status}</span> : null}
         </div>
       </div>
 
-      <button className="text-slate-500 transition hover:text-white">
+      <button className="shrink-0 text-slate-500 transition hover:text-white">
         <ArrowRightIcon />
       </button>
     </article>

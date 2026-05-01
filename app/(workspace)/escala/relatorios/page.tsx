@@ -1,5 +1,6 @@
 import {
   BarChartIcon,
+  ChevronDownIcon,
   PrinterIcon,
 } from "@/app/dashboard/components/icons";
 
@@ -26,18 +27,28 @@ export default function ScaleReportsPage() {
             <span className="mb-2 block text-sm font-medium text-slate-300">
               Mês
             </span>
-            <select className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none">
-              <option>Abril</option>
-            </select>
+            <div className="relative">
+              <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm text-white outline-none">
+                <option>Abril</option>
+              </select>
+              <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
+                <ChevronDownIcon />
+              </span>
+            </div>
           </label>
 
           <label className="block">
             <span className="mb-2 block text-sm font-medium text-slate-300">
               Ano
             </span>
-            <select className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none">
-              <option>2026</option>
-            </select>
+            <div className="relative">
+              <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm text-white outline-none">
+                <option>2026</option>
+              </select>
+              <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
+                <ChevronDownIcon />
+              </span>
+            </div>
           </label>
 
           <div className="flex flex-wrap items-end gap-3">

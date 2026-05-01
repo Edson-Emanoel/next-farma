@@ -126,7 +126,7 @@ export function InfoStrip({
 
   return (
     <div
-      className={`mb-4 flex flex-col gap-2 rounded-full border px-4 py-3 text-sm shadow-[0_10px_24px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center sm:justify-between ${toneClassName}`}
+      className={`mb-4 flex flex-col gap-2 rounded-xl border px-4 py-3 text-sm shadow-[0_10px_24px_rgba(0,0,0,0.12)] sm:flex-row sm:items-center sm:justify-between ${toneClassName}`}
     >
       <p className="inline-flex items-center gap-2 font-medium">
         <Icon />

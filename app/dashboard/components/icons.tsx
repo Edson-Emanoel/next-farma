@@ -109,6 +109,25 @@ export function SettingsIcon() {
   );
 }
 
+export function MenuIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </svg>
+  );
+}
+
+export function XIcon() {
+  return (
+    <svg {...iconProps()}>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  );
+}
+
 export function AlertIcon() {
   return (
     <svg {...iconProps()}>

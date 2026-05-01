@@ -16,11 +16,6 @@ export function DashboardHeader() {
           </p>
         </div>
       </div>
-
-      <div className="rounded-full border border-white/6 bg-white/4 px-4 py-2 text-sm font-medium text-slate-300 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.03)]">
-        <span className="mr-2 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 align-middle" />
-        Sincronizado
-      </div>
     </header>
   );
 }

@@ -6,6 +6,7 @@ import {
 } from "@/app/dashboard/components/icons";
 
 import { PageHeader } from "../_components/page-header";
+import { CorenInput } from "../_components/masked-inputs";
 import { SectionCard, SecondaryButton } from "../_components/ui";
 
 export const metadata = {
@@ -50,10 +51,7 @@ export default function SettingsPage() {
               <span className="mb-2 block text-sm font-medium text-slate-300">
                 COREN
               </span>
-              <input
-                placeholder="Ex.: COREN-SP 123456"
-                className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500"
-              />
+              <CorenInput className="w-full rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 text-sm text-white outline-none placeholder:text-slate-500" />
             </label>
 
             <label className="block md:col-span-2">
@@ -89,7 +87,10 @@ export default function SettingsPage() {
           <h2 className="text-2xl leading-none font-semibold tracking-[-0.04em] text-white">
             Conta
           </h2>
-          <SecondaryButton className="mt-5 gap-2 rounded-[1rem] border-rose-500/18 bg-rose-500/12 text-white hover:border-rose-500/28 hover:text-white">
+          <SecondaryButton
+            href="/login"
+            className="mt-5 gap-2 rounded-[1rem] border-rose-500/18 bg-rose-500/12 text-white hover:border-rose-500/28 hover:text-white"
+          >
             <LogOutIcon />
             Sair
           </SecondaryButton>

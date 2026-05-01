@@ -45,7 +45,7 @@ export default function PatientsPage() {
           </label>
 
           <div className="relative">
-            <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-12 text-sm font-medium text-white">
+            <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm font-medium text-white">
               <option value="Todas">Todas as unidades</option>
               <option value="Enfermaria">Enfermaria</option>
               <option value="Emergencia">Urgência / Emergência</option>
@@ -58,18 +58,18 @@ export default function PatientsPage() {
               <option value="Maternidade">Maternidade</option>
               <option value="UnidadePersonalizada">Unidade Personalizada</option>
             </select>
-            <span className="pointer-events-none absolute inset-y-0 right-4 inline-flex items-center text-slate-400">
+            <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
               <ChevronDownIcon />
             </span>
           </div>
 
           <div className="relative">
-            <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-12 text-sm font-medium text-white">
+            <select className="w-full appearance-none rounded-[1rem] border border-white/10 bg-[#0a1620] px-4 py-3 pr-16 text-sm font-medium text-white">
               <option value="MaisRecentes">Mais recentes</option>
               <option value="NomeAZ">Nome A - Z</option>
               <option value="PorUnidade">Por unidade</option>
             </select>
-            <span className="pointer-events-none absolute inset-y-0 right-4 inline-flex items-center text-slate-400">
+            <span className="pointer-events-none absolute inset-y-0 right-5 inline-flex items-center text-slate-400">
               <ChevronDownIcon />
             </span>
           </div>

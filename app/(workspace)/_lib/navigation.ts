@@ -49,7 +49,7 @@ export const managementTabs = [
     iconName: "people" as const,
   },
   {
-    label: "Escalas Salvas",
+    label: "Escalas",
     href: "/gestao-escala/escalas-salvas",
     iconName: "prescription" as const,
   },
